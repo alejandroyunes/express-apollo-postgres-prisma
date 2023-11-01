@@ -17,3 +17,8 @@ Todo:
 9.resolvers
 10.services
 11.optimization for queries with extract selection util
+
+
+npx prisma migrate dev --name init 
+
+npx prisma genertate
