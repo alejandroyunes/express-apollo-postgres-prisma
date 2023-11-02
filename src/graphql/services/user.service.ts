@@ -21,9 +21,7 @@ export const getUsers = async ({ info }: GetUsersArgs) => {
   const extractedSelections = extractSelection(info)
   const postsIncluded = extractedSelections.includes("posts")
 
-  if (postsIncluded) {
-    return await prisma.user.findMany({ include: { posts: true } })
-  }
+  if (postsIncluded) { return await prisma.user.findMany({ include: { posts: true } }) }
 
   return await prisma.user.findMany()
 }

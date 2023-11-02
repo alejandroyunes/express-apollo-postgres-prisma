@@ -1,4 +1,4 @@
-import {GraphQLResolveInfo} from "graphql"
+import { GraphQLResolveInfo } from "graphql"
 
 const getSelections = (info: GraphQLResolveInfo) => {
   return info.fieldNodes[0].selectionSet?.selections || null
